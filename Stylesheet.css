@@ -1,0 +1,794 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #000000;
+  color: white;
+  font-family: sans-serif;
+  padding: 20px 40px;
+}
+html {
+  scroll-behavior: smooth;
+}
+header {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  border-bottom: 1px solid #333;
+  padding: 20px 0px;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+.nav ul {
+  display: flex;
+  gap: 20px;
+}
+.nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* gap: 50px; */
+}
+.nav ul li {
+  list-style: none;
+  text-decoration: none;
+}
+.nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+  font-size: 18px;
+  transition: 5s ease;
+}
+.hero-section {
+  width: 90vw;
+  min-height: 60vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #333;
+}
+.Hero-Container {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-evenly;
+  align-items: start;
+}
+.hed-container {
+  font-size: 28px;
+}
+.position-container h3 {
+  font-size: 28px;
+}
+.postion-cont {
+  font-size: 22px;
+}
+.hero-btnContaianer {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.hero-btnContaianer button {
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: black;
+  color: white;
+  border: none;
+  border: 2px solid white;
+  cursor: pointer;
+  border-radius: 5px;
+  transform: scale(1);
+  transition:
+    transform 0.6s ease-out,
+    box-shadow 0.6s ease-out;
+}
+.Download-btn {
+  text-decoration: none;
+  display: inline-block;
+}
+.Download-btn a{
+  color: white;
+}
+.hero-btnContaianer button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+  transition:
+    transform 0.2s ease-in,
+    box-shadow 0.2s ease-in;
+}
+
+.About-Me {
+  width: 90vw;
+  min-height: 60vh;
+  margin: auto;
+  background-color: black;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  border-bottom: 1px solid #333;
+}
+.About-Cont1 {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+.About-Cont1 h1 {
+  font-size: 30px;
+  padding: 10px 0px;
+}
+.About-Cont1 p {
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  /* padding: 10px 0px; */
+  text-transform: capitalize;
+}
+.About-info {
+  width: 60%;
+  min-height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: end;
+  padding: 20px 0px;
+  /* background-color: chocolate; */
+}
+.AbtInfo {
+  min-height: 60px;
+  width: 40vw;
+  border: 1px solid #bebebe;
+  padding: 20px 20px;
+  border-radius: 5px;
+}
+.AbtInfo h5 {
+  font-size: 18px;
+}
+.Skill {
+  width: 90vw;
+  min-height: 60vh;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: auto;
+  border-bottom: 1px solid #333;
+}
+.SkillHedCont {
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(0, 0, 0);
+  justify-content: center;
+  align-items: center;
+}
+.SkillHedCont h1 {
+  font-size: 40px;
+}
+.SkillsCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+.skilbx {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 10px 60px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #cfcfcf;
+  border-radius: 5px;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+.skilbx h3 {
+  font-size: 21px;
+  font-weight: 500;
+}
+.SkillsCont:hover .skilbx {
+  filter: blur(4px);
+  opacity: 0.5;
+}
+
+/* keep hovered skill box clear */
+.SkillsCont .skilbx:hover {
+  filter: blur(0);
+  opacity: 1;
+  transform: scale(1.08);
+  z-index: 2;
+}
+.Progrees-Bar {
+  width: 90vw;
+  min-height: 60vh;
+  padding: 40px;
+  margin: auto;
+  border-bottom: 1px solid #444;
+  background: #000;
+}
+
+/* Heading */
+.ProgessHedCont {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.ProgessHedCont h1 {
+  font-size: 30px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* Layout */
+.progress-cont {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Columns */
+.pro-Cont1,
+.pro-Cont2 {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Icon */
+.prrbx img {
+  width: 36px;
+  filter: grayscale(100%);
+}
+
+/* Skill name */
+.prrbx h3 {
+  width: 90px;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Progress bar */
+.progressbar {
+  flex: 1;
+  height: 10px;
+  border: 1px solid #777;
+  background: transparent;
+  /* overflow: hidden; */
+}
+
+/* Progress fill */
+.barlen {
+  height: 100%;
+  background: #fff;
+  color: #000;
+  font-size: 10px;
+  text-align: right;
+  padding-right: 6px;
+  line-height: 10px;
+  transition: width 1.5s ease;
+}
+
+/* Percentages */
+.html {
+  width: 90%;
+}
+.css {
+  width: 80%;
+}
+.js {
+  width: 70%;
+}
+.react {
+  width: 65%;
+}
+.git {
+  width: 75%;
+}
+.db {
+  width: 60%;
+}
+
+.progressbar h5 {
+  padding: 5px 0px;
+  color: white;
+  font-size: 15px;
+  text-align: end;
+}
+
+.prrbx {
+  width: 20vw;
+  min-width: 450px;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #555;
+  padding: 10px 15px;
+}
+
+.Project {
+  width: 90vw;
+  min-height: 60vh;
+  padding: 40px;
+  margin: auto;
+  border-bottom: 1px solid #444;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ProjectMainCont {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  align-items: center;
+}
+.ProjectBtnCont button a{
+  border: none;
+  text-decoration: none;
+}
+.Projectbx {
+  width: 30%;
+  min-width: 300px;
+  height: 200px;
+  background-color: rgb(36, 35, 35);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+.prjHead {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  width: 100%;
+}
+.prjHead h2 {
+  font-size: 28px;
+}
+
+.ProjectInfo {
+  padding: 10px;
+  text-align: center;
+}
+.ProjectInfo h4 {
+  font-size: 15px;
+}
+.ProjectBtnCont {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.Projectbx button {
+  padding: 10px 45px;
+  border: none;
+  border: 1px solid #bebebe;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+.Live-Demo {
+  background-color: white;
+  color: black;
+}
+.GitHub {
+  background-color: #333;
+  color: rgb(255, 255, 255);
+  border: none;
+  border: 2px solid white;
+}
+.Education {
+  width: 90vw;
+  min-height: 60vh;
+  padding: 40px;
+  margin: auto;
+  border-bottom: 1px solid #444;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Education {
+  padding: 80px 10%;
+  background: #000000;
+  color: #ffffff;
+}
+
+.ProgessHedCont {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ProgessHedCont h1 {
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+/* Main container */
+.EduMContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+/* Column */
+.EducationContainer,
+.ExperienceContainer {
+  width: 48%;
+  position: relative;
+}
+
+/* Vertical line */
+.EducationContainer::before,
+.ExperienceContainer::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 50px;
+  width: 2px;
+  height: 100%;
+  background: #ffffff;
+}
+
+.sectionTitle {
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.timelineItem {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 40px;
+}
+
+.dot {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.card {
+  border: 1px solid #ffffff;
+  padding: 20px;
+  background: #000000;
+  transition: 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.year {
+  font-size: 13px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.card h3 {
+  margin: 0 0 8px 0;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.Contact-us {
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 8%;
+  background: #000;
+  color: #fff;
+}
+
+.ProgessHedCont h1 {
+  font-size: 40px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.ContactMainContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* LEFT SIDE */
+.Message-Container {
+  width: 40%;
+}
+
+.msg-cont h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.msg-cont h4 {
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.msg-cont p {
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.msgbx {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+.msgbx img {
+  width: 30px;
+}
+
+.msgbx a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.msgbx a:hover {
+  text-decoration: underline;
+}
+
+.msgbx1 {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.msgbx1 a {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.msgbx1 img {
+  width: 30px;
+}
+
+/* RIGHT SIDE FORM */
+.formContainer {
+  width: 60%;
+}
+
+.form-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input-row {
+  display: flex;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.input-group label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+input,
+textarea {
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #555;
+  color: #fff;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #fff;
+}
+
+.send-btn {
+  width: 150px;
+  padding: 12px;
+  background: #fff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.send-btn:hover {
+  background: #ccc;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    position: relative;
+  }
+  .nav ul {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    background: #111;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    display: none;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hed-container {
+    font-size: 24px;
+  }
+  .position-container h3 {
+    font-size: 25px;
+  }
+  .postion-cont {
+    font-size: 19px;
+  }
+  .hero-btnContaianer {
+    flex-direction: column;
+  }
+  .hero-btnContaianer button {
+    padding: 8px 16px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .About-Me {
+    flex-direction: column;
+  }
+  .About-Cont1 {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .About-Cont1 h1 {
+    font-size: 25px;
+    padding: 8px 0px;
+  }
+  .About-info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .AbtInfo {
+    width: 100%;
+  }
+  .skilbx {
+    padding: 6px 30px;
+  }
+  .skilbx h3 {
+    font-size: 19px;
+  }
+  .Progrees-Bar {
+    display: flex;
+    flex-direction: column;
+  }
+  .progress-cont {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .pro-Cont1,
+  .pro-Cont2 {
+    justify-content: center;
+    align-items: center;
+  }
+  .ProgessHedCont {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .ProgessHedCont h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+  }
+  .ProjectMainCont {
+    flex-direction: column;
+  }
+  .Projectbx {
+    width: 100%;
+    padding: 8px 16px;
+  }
+  .Projectbx button {
+    padding: 6px 25px;
+  }
+  .Education {
+    padding: 30px 10%;
+  }
+
+  .EduMContainer {
+    flex-direction: column;
+  }
+  .EducationContainer,
+  .ExperienceContainer {
+    width: 90%;
+    position: relative;
+  }
+  .ExperienceContainer::before {
+    height: 80%;
+  }
+  .ContactMainContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Message-Container {
+    width: 80%;
+  }
+  .msgbx {
+    margin-top: 10px;
+  }
+  .formContainer {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Contact-us {
+    padding: 50px 8%;
+  }
+  .form-cont {
+    width: 100%;
+  }
+}
